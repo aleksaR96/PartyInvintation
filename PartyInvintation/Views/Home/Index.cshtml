@@ -1,8 +1,62 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Pozivnica</title>
+</head>
+<body onload="startTime()">
+
+    <div class="container-fluid cover">
+        <div class="container text-center p-5">
+            <p class="h1 display-1 text-white font-weight-bold">Pozivnica</p>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5">
+        <div class="sat text-center font-weight-bold">
+            <p id="clk" class="display-3">
+                <span id="h"></span><span id="m"></span><span id="s"></span>
+            </p>
+        </div>
+        <div class="container">
+            <p class="h4 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti modi odio, neque iste odit? Delectus odio blanditiis rerum doloribus, corporis distinctio facere, nulla non fugiat quis! Dicta expedita, vero fugit!</p>
+            <p class="text-center p-3"><a class="btn btn-lg btn-outline-dark" asp-action="Forma" id="odgovoriBtn">Odgovori na poziv!</a></p>
+        </div>
+    </div>
+
+    <script>
+        var hSpan = document.getElementById('h');
+        var mSpan = document.getElementById('m');
+        var sSpan = document.getElementById('s');
+
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            hSpan.innerHTML = h + ":";
+            mSpan.innerHTML = m + ":";
+            sSpan.innerHTML = s;
+            var t = setTimeout(startTime, 50);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+
+</body>
+</html>

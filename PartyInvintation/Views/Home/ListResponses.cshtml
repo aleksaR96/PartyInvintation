@@ -1,0 +1,11 @@
+﻿@model IEnumerable<PartyInvintation.Models.ResponseModel>
+@{
+    Layout = null;
+}
+
+<h1>ListResponses</h1>
+
+@foreach (ResponseModel response in Model)
+{
+    <p>@(response.Name)</p>
+}

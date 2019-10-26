@@ -1,0 +1,46 @@
+﻿.cover {
+    background-image: linear-gradient(to bottom right, #011936, #ED254E);
+}
+
+.sat {
+    font-family: 'Audiowide', cursive;
+}
+
+#odgovoriBtn {
+    font-family: 'Audiowide', cursive;
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.coverForm {
+    height: 17em;
+    background-image: url("../party.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#coverTitleDiv {
+    background-color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -19em;
+}
+
+#cover {
+    position: relative;
+}

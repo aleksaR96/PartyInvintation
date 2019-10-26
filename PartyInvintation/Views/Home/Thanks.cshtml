@@ -1,0 +1,16 @@
+﻿@model PartyInvintation.Models.ResponseModel
+@{
+    Layout = null;
+}
+
+@if (Model.WillAttend == true)
+{
+    <p>Hvala što dolaziš!</p>
+}
+else
+{
+    <p>Žao mi je što ne dolaziš. :(</p>
+}
+
+    <p>Click <a asp-action="ListResponses">here</a> to see who is coming.</p>
+
