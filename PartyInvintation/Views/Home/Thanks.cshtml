@@ -3,14 +3,53 @@
     Layout = null;
 }
 
-@if (Model.WillAttend == true)
-{
-    <p>Hvala što dolaziš!</p>
-}
-else
-{
-    <p>Žao mi je što ne dolaziš. :(</p>
-}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title></title>
 
-    <p>Click <a asp-action="ListResponses">here</a> to see who is coming.</p>
+    <style media="screen">
+    </style>
+</head>
+<body>
+    <div class="outerDiv">
+        <div class="textDiv">
+            @if (Model.WillAttend == true)
+            {
+                <p class="h1 font-weight-bold display-1 text-light text-center">Hvala što dolaziš!</p>
 
+                <div class="container pt-3 text-center linksDiv text-light">
+                    <hr style="border-color: rgba(255,255,255,0.1)" />
+                    <p><a asp-action="ListResponses">Ko sve dolazi?</a><span class="px-3">|</span><a href="#">Koga mogu da kontaktiram?</a></p>
+                </div>
+            }
+            else
+            {
+                <p class="h1 font-weight-bold display-1 text-light text-center">Žao mi je :(</p>
+            }
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".textDiv").fadeIn(2000);
+      });
+
+      $(document).ready(function(){
+        setTimeout(function() {
+          $(".linksDiv").fadeIn(2000);
+        },
+        1000);
+      });
+    </script>
+</body>
+</html>

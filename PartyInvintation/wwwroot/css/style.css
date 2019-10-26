@@ -1,5 +1,10 @@
 ﻿.cover {
-    background-image: linear-gradient(to bottom right, #011936, #ED254E);
+    /*background-image: linear-gradient(to bottom right, #011936, #ED254E);*/
+    background: linear-gradient(21deg, #011936, #ED254E);
+    background-size: 200% 400%;
+    -webkit-animation: AnimationName 9s ease infinite;
+    -moz-animation: AnimationName 9s ease infinite;
+    animation: AnimationName 9s ease infinite;
 }
 
 .sat {
@@ -43,4 +48,78 @@
 
 #cover {
     position: relative;
+}
+
+.outerDiv {
+    background-image: linear-gradient(to bottom right, #823038, #E5F77D);
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: linear-gradient(21deg, #0e0e0e, #38d1d5);
+    background-size: 400% 200%;
+    -webkit-animation: AnimationName 9s ease infinite;
+    -moz-animation: AnimationName 9s ease infinite;
+    animation: AnimationName 9s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%
+
+{
+    background-position: 60% 0
+}
+
+50% {
+    background-position: 41% 100%
+}
+
+100% {
+    background-position: 60% 0
+}
+
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 60% 0
+    }
+
+    50% {
+        background-position: 41% 100%
+    }
+
+    100% {
+        background-position: 60% 0
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 60% 0
+    }
+
+    50% {
+        background-position: 41% 100%
+    }
+
+    100% {
+        background-position: 60% 0
+    }
+}
+
+.textDiv {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 35vh;
+    display: none;
+}
+
+.linksDiv {
+    display: none;
+}
+
+.linksDiv a {
+    color: #f8f9fa !important;
 }
