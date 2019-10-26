@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyInvintation", "PartyInvintation\PartyInvintation.csproj", "{A8BF73A5-F789-49B7-B1F0-9A73128BC6E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8BF73A5-F789-49B7-B1F0-9A73128BC6E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8BF73A5-F789-49B7-B1F0-9A73128BC6E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8BF73A5-F789-49B7-B1F0-9A73128BC6E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8BF73A5-F789-49B7-B1F0-9A73128BC6E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2A85D27-F948-4C3D-B08D-8322740E8032}
+	EndGlobalSection
+EndGlobal
