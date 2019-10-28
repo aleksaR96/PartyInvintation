@@ -1,10 +1,13 @@
 ﻿.cover {
-    /*background-image: linear-gradient(to bottom right, #011936, #ED254E);*/
+    height: 100vh;
+    width: 100vw;
+    position: relative;
     background: linear-gradient(21deg, #011936, #ED254E);
-    background-size: 200% 400%;
+    background-size: 400% 200%;
     -webkit-animation: AnimationName 9s ease infinite;
     -moz-animation: AnimationName 9s ease infinite;
     animation: AnimationName 9s ease infinite;
+    overflow-y: auto;
 }
 
 .sat {
@@ -60,23 +63,21 @@
     -webkit-animation: AnimationName 9s ease infinite;
     -moz-animation: AnimationName 9s ease infinite;
     animation: AnimationName 9s ease infinite;
+    overflow-y: auto;
 }
 
 @-webkit-keyframes AnimationName {
-    0%
+    0% {
+        background-position: 60% 0
+    }
 
-{
-    background-position: 60% 0
-}
+    50% {
+        background-position: 41% 100%
+    }
 
-50% {
-    background-position: 41% 100%
-}
-
-100% {
-    background-position: 60% 0
-}
-
+    100% {
+        background-position: 60% 0
+    }
 }
 
 @-moz-keyframes AnimationName {
@@ -120,6 +121,19 @@
     display: none;
 }
 
-.linksDiv a {
-    color: #f8f9fa !important;
+    .linksDiv a {
+        color: #f8f9fa !important;
+    }
+
+.innerDiv, .elem {
+    display: none;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 2px solid;
+    border-color: rgba(255,0,0,0.3);
 }

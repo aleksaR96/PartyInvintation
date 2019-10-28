@@ -17,27 +17,29 @@
 </head>
 <body onload="startTime()">
 
-    <div class="container-fluid cover">
-        <div class="container text-center p-5">
-            <p class="h1 display-1 text-white font-weight-bold">Pozivnica</p>
+    <div class="cover">
+        <div class="container-fluid ">
+            <div class="container text-center pt-5 p-md-5">
+                <p class="h1 display-1 text-white font-weight-bold" style="font-size: 6vw;">Pozivnica</p>
+            </div>
         </div>
-    </div>
 
-    <div class="container-fluid pt-5">
-        <div class="sat text-center font-weight-bold">
-            <p id="clk" class="display-3">
-                <span id="h"></span><span id="m"></span><span id="s"></span>
-            </p>
+        <div class="container-fluid text-light">
+            <div class="sat text-center font-weight-bold pt-md-5">
+                <p id="clk" class="display-3" style="font-size: 10vw;">
+                    <span id="h"></span><span id="m"></span><span id="s"></span>
+                </p>
+            </div>
+            <div class="container">
+                <p class="h4 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti modi odio, neque iste odit? Delectus odio blanditiis rerum doloribus, corporis distinctio facere, nulla non fugiat quis! Dicta expedita, vero fugit!</p>
+                <p class="text-center p-3"><a class="btn btn-lg btn-outline-light" asp-action="Forma" id="odgovoriBtn">Odgovori na poziv!</a></p>
+            </div>
         </div>
-        <div class="container">
-            <p class="h4 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti modi odio, neque iste odit? Delectus odio blanditiis rerum doloribus, corporis distinctio facere, nulla non fugiat quis! Dicta expedita, vero fugit!</p>
-            <p class="text-center p-3"><a class="btn btn-lg btn-outline-dark" asp-action="Forma" id="odgovoriBtn">Odgovori na poziv!</a></p>
-        </div>
-    </div>
 
-    <div class="container pt-3 text-center">
-        <hr />
-        <p><a asp-action="ListResponses">Ko sve dolazi?</a><span class="text-dark px-3">|</span><a href="#">Koga mogu da kontaktiram?</a></p>
+        <div class="container pt-3 text-center linksDiv" style="display: block">
+            <hr style="border-color: rgba(255,255,255,0.1)" />
+            <p><a asp-action="ListResponses">Ko sve dolazi?</a><span class="text-light px-3">|</span><a href="#">Koga mogu da kontaktiram?</a></p>
+        </div>
     </div>
 
     <script>

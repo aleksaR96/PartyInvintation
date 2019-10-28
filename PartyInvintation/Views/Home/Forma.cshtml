@@ -22,27 +22,29 @@
     <div class="container-fluid coverForm">
         <div class="container text-center" id="cover">
             <div class="" id="coverTitleDiv">
-                <p class="h1 display-3 text-light font-weight-bold" id="coverTitle">Unesi svoje podatke:</p>
+                <p class="h1 text-light display-3 font-weight-bold" id="coverTitle">Unesi svoje podatke:</p>
             </div>
         </div>
     </div>
 
     <div class="container p-5">
         <form class="p-5" asp-action="" method="post">
-            <div asp-validation-summary="All"></div>
             <div class="form-group">
                 <label asp-for="Name">Ime i prezime:</label>
-                <input type="text" asp-for="Name" value="" class="form-control">
+                <input type="text" asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Email">E-mail:</label>
-                <input type="text" asp-for="Email" value="" class="form-control">
+                <input type="text" asp-for="Email" class="form-control">
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Phone">Broj telefona:</label>
-                <input type="text" asp-for="Phone" value="" class="form-control">
+                <input type="text" asp-for="Phone" class="form-control">
+                <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
 
             <div class="form-group">
@@ -52,6 +54,7 @@
                     <option value="true">Dolazim!</option>
                     <option value="false">Ne mogu doći :(</option>
                 </select>
+                <span asp-validation-for="WillAttend" class="text-danger"></span>
             </div>
 
             <button class="btn btn-lg btn-outline-dark" type="submit" id="odgovoriBtn">Pošalji odgovor!</button>

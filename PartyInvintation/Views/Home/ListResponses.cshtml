@@ -3,9 +3,59 @@
     Layout = null;
 }
 
-<h1>ListResponses</h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css">
 
-@foreach (ResponseModel response in Model)
-{
-    <p>@(response.Name)</p>
-}
+
+    <title></title>
+</head>
+<body>
+    <div class="outerDiv">
+
+        <div class="cover">
+            <div class="container py-5">
+                <p class="h1 text-light font-weight-bold" style="font-size: 7vw;">Lista gostiju</p>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    @foreach (ResponseModel response in Model)
+                    {
+                        <div class="col-6 col-md-3 mb-5">
+                            <div class="card elem">
+                                <img src="https://www.w3schools.com/bootstrap4/img_avatar1.png" class="img-card-top img-fluid" />
+                                <div class="card-body">
+                                    <p class="font-weight-bold mb-1">@response.Name</p>
+                                    <p class="text-muted small mb-0">@response.Email</p>
+                                    <p class="text-muted small mb-0">@response.Phone</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".innerDiv").fadeIn(2000);
+        });
+
+        $(document).ready(function () {
+            $(".elem").each(function (index) {
+                $(this).delay(400 * index).fadeIn(300);
+            });
+        });
+    </script>
+</body>
